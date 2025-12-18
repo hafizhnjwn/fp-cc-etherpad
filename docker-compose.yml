@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   postgres-db:
@@ -15,7 +15,7 @@ services:
       - "5433:5432" # PENTING: Buka port ini agar Python Manager bisa baca DB
 
   saas-manager:
-    build: 
+    build:
       context: ./saas_manager
     container_name: saas-manager
     ports:
