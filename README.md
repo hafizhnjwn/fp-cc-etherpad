@@ -1,6 +1,7 @@
 # Etherpad SaaS - Multi-Tenant Cloud PlatformProyek ini adalah implementasi **Platform-as-a-Service (PaaS)** dan **Software-as-a-Service (SaaS)** menggunakan **Etherpad Lite** sebagai basis aplikasi editor kolaboratif *real-time*. Proyek ini dirancang untuk memenuhi tugas akhir mata kuliah Komputasi Awan, mendemonstrasikan konsep *Multi-tenancy*, *Dynamic Provisioning*, dan *State Isolation* menggunakan Docker.
 
-## 🌟 Fitur Utama1. **Container-based Multi-tenancy:** Setiap tenant (klien) mendapatkan container Etherpad terisolasi sendiri untuk keamanan dan manajemen sumber daya.
+## 🌟 Fitur Utama
+1. **Container-based Multi-tenancy:** Setiap tenant (klien) mendapatkan container Etherpad terisolasi sendiri untuk keamanan dan manajemen sumber daya.
 2. **Dynamic Provisioning:** Pembuatan instance tenant baru secara otomatis via Dashboard Admin (Python Flask) tanpa mematikan server.
 3. **Centralized Database:** Menggunakan satu instance PostgreSQL untuk menyimpan data dari semua tenant secara terpusat.
 4. **Global Shared Storage:** Fitur "Smart Link" yang memungkinkan kolaborasi lintas-tenant dengan mempertahankan identitas user dan sesi *real-time*.
