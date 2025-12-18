@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SaaS Dashboard</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .box { border: 1px solid #ddd; padding: 15px; margin-bottom: 20px; border-radius: 5px; }
+        .pad-list { display: flex; flex-wrap: wrap; gap: 10px; }
+        .pad-item { background: #e0f7fa; padding: 10px; border-radius: 4px; text-decoration: none; color: #006064; }
+        .pad-item:hover { background: #b2ebf2; }
+    </style>
+</head>
+<body>
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+        <h1>Halo, {{ user.username }}</h1>
+        <a href="{{ url_for('logout') }}" style="color:red;">Logout</a>
+    </div>
+
+    <div class="box" style="border-color: #007bff;">
+        <h3>📂 Global Shared Storage (Semua Pad)</h3>
+        <p>File ini tersimpan terpusat dan bisa diakses semua user.</p>
+        
+        {% if pads %}
+            <div class="pad-list">
+            {% for pad in pads %}
+                <a href="http://localhost:{{ port }}/p/{{ pad }}" target="_blank" class="pad-item">
+                    📄 {{ pad }}
+                </a>
+            {% endfor %}
+            </div>
+        {% else %}
+            <p><i>Belum ada file/pad yang dibuat.</i></p>
+        {% endif %}
+    </div>
+
+    {% if user.role == 'admin' %}
+        <div class="box">
+            <h3>⚙️ Admin Provisioning</h3>
+            <form action="{{ url_for('add_tenant') }}" method="POST">
+                <input type="text" name="username" placeholder="New Tenant" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Deploy Tenant</button>
+            </form>
+            <h4>Active Instances:</h4>
+            <ul>
+            {% for tenant in tenants %}
+                <li>{{ tenant.username }} (Port: {{ tenant.container_port }})</li>
+            {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+    {% if user.role != 'admin' %}
+        <div class="box">
+            <h3>🚀 Instance Pribadi Anda</h3>
+            <a href="http://localhost:{{ user.container_port }}" target="_blank">
+                Buka Etherpad Saya (Port {{ user.container_port }})
+            </a>
+        </div>
+    {% endif %}
+
+</body>
+</html>

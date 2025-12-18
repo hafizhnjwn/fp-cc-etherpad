@@ -1,0 +1,454 @@
+.
+├── admin
+│   ├── index.html
+│   ├── node_modules
+│   │   ├── @radix-ui
+│   │   ├── @types
+│   │   ├── @typescript-eslint
+│   │   ├── @vitejs
+│   │   ├── babel-plugin-react-compiler -> ../../node_modules/.pnpm/babel-plugin-react-compiler@19.1.0-rc.3/node_modules/babel-plugin-react-compiler
+│   │   ├── eslint -> ../../node_modules/.pnpm/eslint@9.38.0/node_modules/eslint
+│   │   ├── eslint-plugin-react-hooks -> ../../node_modules/.pnpm/eslint-plugin-react-hooks@7.0.1_eslint@9.38.0/node_modules/eslint-plugin-react-hooks
+│   │   ├── eslint-plugin-react-refresh -> ../../node_modules/.pnpm/eslint-plugin-react-refresh@0.4.24_eslint@9.38.0/node_modules/eslint-plugin-react-refresh
+│   │   ├── i18next -> ../../node_modules/.pnpm/i18next@25.6.0_typescript@5.9.3/node_modules/i18next
+│   │   ├── i18next-browser-languagedetector -> ../../node_modules/.pnpm/i18next-browser-languagedetector@8.2.0/node_modules/i18next-browser-languagedetector
+│   │   ├── lucide-react -> ../../node_modules/.pnpm/lucide-react@0.552.0_react@19.2.0/node_modules/lucide-react
+│   │   ├── react -> ../../node_modules/.pnpm/react@19.2.0/node_modules/react
+│   │   ├── react-dom -> ../../node_modules/.pnpm/react-dom@19.2.0_react@19.2.0/node_modules/react-dom
+│   │   ├── react-hook-form -> ../../node_modules/.pnpm/react-hook-form@7.65.0_react@19.2.0/node_modules/react-hook-form
+│   │   ├── react-i18next -> ../../node_modules/.pnpm/react-i18next@16.2.3_i18next@25.6.0_typescript@5.9.3__react-dom@19.2.0_react@19.2.0__react@19.2.0_typescript@5.9.3/node_modules/react-i18next
+│   │   ├── react-router-dom -> ../../node_modules/.pnpm/react-router-dom@7.9.5_react-dom@19.2.0_react@19.2.0__react@19.2.0/node_modules/react-router-dom
+│   │   ├── socket.io-client -> ../../node_modules/.pnpm/socket.io-client@4.8.1/node_modules/socket.io-client
+│   │   ├── typescript -> ../../node_modules/.pnpm/typescript@5.9.3/node_modules/typescript
+│   │   ├── vite -> ../../node_modules/.pnpm/rolldown-vite@7.2.0_@types+node@24.9.2_esbuild@0.25.12_tsx@4.20.6/node_modules/rolldown-vite
+│   │   ├── vite-plugin-babel -> ../../node_modules/.pnpm/vite-plugin-babel@1.3.2_@babel+core@7.28.5_rolldown-vite@7.2.0_@types+node@24.9.2_esbuild@0.25.12_tsx@4.20.6_/node_modules/vite-plugin-babel
+│   │   ├── vite-plugin-static-copy -> ../../node_modules/.pnpm/vite-plugin-static-copy@3.1.4_rolldown-vite@7.2.0_@types+node@24.9.2_esbuild@0.25.12_tsx@4.20.6_/node_modules/vite-plugin-static-copy
+│   │   └── zustand -> ../../node_modules/.pnpm/zustand@5.0.8_@types+react@19.2.2_react@19.2.0_use-sync-external-store@1.6.0_react@19.2.0_/node_modules/zustand
+│   ├── package.json
+│   ├── public
+│   │   ├── brand.svg
+│   │   ├── ep_admin_pads
+│   │   ├── fond.jpg
+│   │   ├── Karla-Bold.ttf
+│   │   ├── Karla-BoldItalic.ttf
+│   │   ├── Karla-ExtraBold.ttf
+│   │   ├── Karla-ExtraBoldItalic.ttf
+│   │   ├── Karla-ExtraLight.ttf
+│   │   ├── Karla-ExtraLightItalic.ttf
+│   │   ├── Karla-Italic.ttf
+│   │   ├── Karla-Light.ttf
+│   │   ├── Karla-LightItalic.ttf
+│   │   ├── Karla-Medium.ttf
+│   │   ├── Karla-MediumItalic.ttf
+│   │   ├── Karla-Regular.ttf
+│   │   ├── Karla-SemiBold.ttf
+│   │   └── Karla-SemiBoldItalic.ttf
+│   ├── README.md
+│   ├── src
+│   │   ├── App.css
+│   │   ├── App.tsx
+│   │   ├── components
+│   │   ├── index.css
+│   │   ├── localization
+│   │   ├── main.tsx
+│   │   ├── pages
+│   │   ├── store
+│   │   ├── utils
+│   │   └── vite-env.d.ts
+│   ├── tsconfig.json
+│   ├── tsconfig.node.json
+│   └── vite.config.ts
+├── bin
+│   ├── buildDebian.sh
+│   ├── buildForWindows.sh
+│   ├── checkAllPads.ts
+│   ├── checkPad.ts
+│   ├── cleanRun.sh
+│   ├── commonPlugins.ts
+│   ├── convertSettings.json.template
+│   ├── createRelease.sh
+│   ├── createUserSession.ts
+│   ├── deb-src
+│   │   ├── DEBIAN
+│   │   └── sysroot
+│   ├── debugRun.sh
+│   ├── deleteAllGroupSessions.ts
+│   ├── deletePad.ts
+│   ├── extractPadData.ts
+│   ├── fastRun.sh
+│   ├── functions.sh
+│   ├── generateReleaseNotes.ts
+│   ├── importSqlFile.ts
+│   ├── installDeps.sh
+│   ├── installLocalPlugins.sh
+│   ├── installOnWindows.bat
+│   ├── make_docs.ts
+│   ├── migrateDB.ts
+│   ├── migrateDirtyDBtoRealDB.ts
+│   ├── node_modules
+│   │   ├── @types
+│   │   ├── axios -> ../../node_modules/.pnpm/axios@1.13.2/node_modules/axios
+│   │   ├── ep_etherpad-lite -> ../../src
+│   │   ├── log4js -> ../../node_modules/.pnpm/log4js@6.9.1/node_modules/log4js
+│   │   ├── semver -> ../../node_modules/.pnpm/semver@7.7.3/node_modules/semver
+│   │   ├── tsx -> ../../node_modules/.pnpm/tsx@4.20.6/node_modules/tsx
+│   │   ├── typescript -> ../../node_modules/.pnpm/typescript@5.9.3/node_modules/typescript
+│   │   └── ueberdb2 -> ../../node_modules/.pnpm/ueberdb2@5.0.22/node_modules/ueberdb2
+│   ├── nsis
+│   │   ├── brand.ico
+│   │   ├── etherpad.nsi
+│   │   └── README.md
+│   ├── package.json
+│   ├── plugins
+│   │   ├── checkPlugin.ts
+│   │   ├── getCorePlugins.sh
+│   │   ├── lib
+│   │   ├── listOfficialPlugins
+│   │   ├── README.md
+│   │   ├── reTestAllPlugins.sh
+│   │   ├── stalePlugins.ts
+│   │   ├── updateAllPluginsScript.sh
+│   │   └── updateCorePlugins.sh
+│   ├── plugins.ts
+│   ├── push-after-release.sh
+│   ├── rebuildPad.ts
+│   ├── release.ts
+│   ├── repairPad.ts
+│   ├── run.sh
+│   ├── safeRun.sh
+│   ├── tsconfig.json
+│   └── updatePlugins.sh
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── doc
+│   ├── api
+│   │   ├── api.adoc
+│   │   ├── changeset_library.adoc
+│   │   ├── changeset_library.md
+│   │   ├── editbar.adoc
+│   │   ├── editbar.md
+│   │   ├── editorInfo.adoc
+│   │   ├── editorInfo.md
+│   │   ├── embed_parameters.adoc
+│   │   ├── embed_parameters.md
+│   │   ├── hooks_client-side.adoc
+│   │   ├── hooks_client-side.md
+│   │   ├── hooks_overview.adoc
+│   │   ├── hooks_overview.md
+│   │   ├── hooks_server-side.adoc
+│   │   ├── hooks_server-side.md
+│   │   ├── http_api.adoc
+│   │   ├── http_api.md
+│   │   ├── index.md
+│   │   ├── pluginfw.adoc
+│   │   ├── pluginfw.md
+│   │   ├── toolbar.adoc
+│   │   └── toolbar.md
+│   ├── assets
+│   │   └── style.css
+│   ├── cli.md
+│   ├── cookies.adoc
+│   ├── cookies.md
+│   ├── database.adoc
+│   ├── demo.md
+│   ├── docker.adoc
+│   ├── docker.md
+│   ├── documentation.adoc
+│   ├── documentation.md
+│   ├── index.adoc
+│   ├── index.md
+│   ├── localization.adoc
+│   ├── localization.md
+│   ├── node_modules
+│   │   └── vitepress -> ../../node_modules/.pnpm/vitepress@2.0.0-alpha.12_@types+node@24.9.2_axios@1.13.2_jwt-decode@4.0.0_lightningcss@_5745045364dd02285c5c0d9b524c45a7/node_modules/vitepress
+│   ├── package.json
+│   ├── plugins.adoc
+│   ├── plugins.md
+│   ├── public
+│   │   ├── easysync
+│   │   ├── etherpad_basic.png
+│   │   ├── etherpad_demo.gif
+│   │   ├── etherpad_full_features.png
+│   │   ├── etherpad_skin_variants.gif
+│   │   └── favicon.ico
+│   ├── skins.adoc
+│   ├── skins.md
+│   ├── stats.adoc
+│   └── stats.md
+├── docker-compose.dev.yml
+├── docker-compose.yml
+├── Dockerfile
+├── LICENSE
+├── local_plugins
+├── node_modules
+│   ├── admin -> ../admin
+│   ├── docs -> ../doc
+│   ├── ep_etherpad-lite -> ../src
+│   └── ui -> ../ui
+├── package.json
+├── pnpm-lock.yaml
+├── pnpm-workspace.yaml
+├── README.md
+├── SECURITY.md
+├── settings.json.docker
+├── settings.json.template
+├── src
+│   ├── ep.json
+│   ├── etherpad_icon.svg
+│   ├── locales
+│   │   ├── af.json
+│   │   ├── ar.json
+│   │   ├── ast.json
+│   │   ├── awa.json
+│   │   ├── az.json
+│   │   ├── azb.json
+│   │   ├── bcc.json
+│   │   ├── be-tarask.json
+│   │   ├── bg.json
+│   │   ├── bgn.json
+│   │   ├── bn.json
+│   │   ├── br.json
+│   │   ├── bs.json
+│   │   ├── ca.json
+│   │   ├── ce.json
+│   │   ├── cs.json
+│   │   ├── da.json
+│   │   ├── de.json
+│   │   ├── diq.json
+│   │   ├── dsb.json
+│   │   ├── dty.json
+│   │   ├── el.json
+│   │   ├── en-gb.json
+│   │   ├── en.json
+│   │   ├── eo.json
+│   │   ├── es.json
+│   │   ├── et.json
+│   │   ├── eu.json
+│   │   ├── fa.json
+│   │   ├── ff.json
+│   │   ├── fi.json
+│   │   ├── fo.json
+│   │   ├── fr.json
+│   │   ├── fy.json
+│   │   ├── gl.json
+│   │   ├── got.json
+│   │   ├── gu.json
+│   │   ├── he.json
+│   │   ├── hi.json
+│   │   ├── hr.json
+│   │   ├── hrx.json
+│   │   ├── hsb.json
+│   │   ├── hu.json
+│   │   ├── hy.json
+│   │   ├── ia.json
+│   │   ├── id.json
+│   │   ├── is.json
+│   │   ├── it.json
+│   │   ├── ja.json
+│   │   ├── kab.json
+│   │   ├── km.json
+│   │   ├── kn.json
+│   │   ├── ko.json
+│   │   ├── krc.json
+│   │   ├── ksh.json
+│   │   ├── ku-latn.json
+│   │   ├── lb.json
+│   │   ├── lki.json
+│   │   ├── ln.json
+│   │   ├── lrc.json
+│   │   ├── lt.json
+│   │   ├── lv.json
+│   │   ├── map-bms.json
+│   │   ├── mg.json
+│   │   ├── mk.json
+│   │   ├── ml.json
+│   │   ├── mn.json
+│   │   ├── mnw.json
+│   │   ├── mr.json
+│   │   ├── ms.json
+│   │   ├── my.json
+│   │   ├── nah.json
+│   │   ├── nap.json
+│   │   ├── nb.json
+│   │   ├── nds.json
+│   │   ├── ne.json
+│   │   ├── nl.json
+│   │   ├── nn.json
+│   │   ├── oc.json
+│   │   ├── olo.json
+│   │   ├── os.json
+│   │   ├── pa.json
+│   │   ├── pl.json
+│   │   ├── pms.json
+│   │   ├── ps.json
+│   │   ├── pt-br.json
+│   │   ├── pt.json
+│   │   ├── qqq.json
+│   │   ├── ro.json
+│   │   ├── ru.json
+│   │   ├── sc.json
+│   │   ├── sco.json
+│   │   ├── sd.json
+│   │   ├── sh-latn.json
+│   │   ├── shn.json
+│   │   ├── sk.json
+│   │   ├── skr-arab.json
+│   │   ├── sl.json
+│   │   ├── sms.json
+│   │   ├── sq.json
+│   │   ├── sr-ec.json
+│   │   ├── sr-el.json
+│   │   ├── sro.json
+│   │   ├── sv.json
+│   │   ├── sw.json
+│   │   ├── ta.json
+│   │   ├── tcy.json
+│   │   ├── te.json
+│   │   ├── th.json
+│   │   ├── tr.json
+│   │   ├── uk.json
+│   │   ├── vec.json
+│   │   ├── vi.json
+│   │   ├── zh-hans.json
+│   │   └── zh-hant.json
+│   ├── node
+│   │   ├── db
+│   │   ├── eejs
+│   │   ├── handler
+│   │   ├── hooks
+│   │   ├── metrics.ts
+│   │   ├── padaccess.ts
+│   │   ├── prometheus.ts
+│   │   ├── README.md
+│   │   ├── security
+│   │   ├── server.ts
+│   │   ├── stats.ts
+│   │   ├── types
+│   │   └── utils
+│   ├── node_modules
+│   │   ├── @playwright
+│   │   ├── @types
+│   │   ├── async -> ../../node_modules/.pnpm/async@3.2.6/node_modules/async
+│   │   ├── axios -> ../../node_modules/.pnpm/axios@1.13.2/node_modules/axios
+│   │   ├── chokidar -> ../../node_modules/.pnpm/chokidar@4.0.3/node_modules/chokidar
+│   │   ├── cookie-parser -> ../../node_modules/.pnpm/cookie-parser@1.4.7/node_modules/cookie-parser
+│   │   ├── cross-env -> ../../node_modules/.pnpm/cross-env@10.1.0/node_modules/cross-env
+│   │   ├── cross-spawn -> ../../node_modules/.pnpm/cross-spawn@7.0.6/node_modules/cross-spawn
+│   │   ├── ejs -> ../../node_modules/.pnpm/ejs@3.1.10/node_modules/ejs
+│   │   ├── esbuild -> ../../node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild
+│   │   ├── eslint -> ../../node_modules/.pnpm/eslint@9.38.0/node_modules/eslint
+│   │   ├── eslint-config-etherpad -> ../../node_modules/.pnpm/eslint-config-etherpad@4.0.4_eslint@9.38.0_typescript@5.9.3/node_modules/eslint-config-etherpad
+│   │   ├── etherpad-cli-client -> ../../node_modules/.pnpm/etherpad-cli-client@3.0.5/node_modules/etherpad-cli-client
+│   │   ├── express -> ../../node_modules/.pnpm/express@5.1.0/node_modules/express
+│   │   ├── express-rate-limit -> ../../node_modules/.pnpm/express-rate-limit@8.2.1_express@5.1.0/node_modules/express-rate-limit
+│   │   ├── express-session -> ../../node_modules/.pnpm/express-session@1.18.2/node_modules/express-session
+│   │   ├── find-root -> ../../node_modules/.pnpm/find-root@1.1.0/node_modules/find-root
+│   │   ├── formidable -> ../../node_modules/.pnpm/formidable@3.5.4/node_modules/formidable
+│   │   ├── http-errors -> ../../node_modules/.pnpm/http-errors@2.0.0/node_modules/http-errors
+│   │   ├── jose -> ../../node_modules/.pnpm/jose@6.1.0/node_modules/jose
+│   │   ├── js-cookie -> ../../node_modules/.pnpm/js-cookie@3.0.5/node_modules/js-cookie
+│   │   ├── jsdom -> ../../node_modules/.pnpm/jsdom@27.1.0/node_modules/jsdom
+│   │   ├── jsonminify -> ../../node_modules/.pnpm/jsonminify@0.4.2/node_modules/jsonminify
+│   │   ├── jsonwebtoken -> ../../node_modules/.pnpm/jsonwebtoken@9.0.2/node_modules/jsonwebtoken
+│   │   ├── jwt-decode -> ../../node_modules/.pnpm/jwt-decode@4.0.0/node_modules/jwt-decode
+│   │   ├── languages4translatewiki -> ../../node_modules/.pnpm/languages4translatewiki@0.1.3/node_modules/languages4translatewiki
+│   │   ├── live-plugin-manager -> ../../node_modules/.pnpm/live-plugin-manager@1.1.0/node_modules/live-plugin-manager
+│   │   ├── lodash.clonedeep -> ../../node_modules/.pnpm/lodash.clonedeep@4.5.0/node_modules/lodash.clonedeep
+│   │   ├── log4js -> ../../node_modules/.pnpm/log4js@6.9.1/node_modules/log4js
+│   │   ├── lru-cache -> ../../node_modules/.pnpm/lru-cache@11.2.2/node_modules/lru-cache
+│   │   ├── measured-core -> ../../node_modules/.pnpm/measured-core@2.0.0/node_modules/measured-core
+│   │   ├── mime-types -> ../../node_modules/.pnpm/mime-types@3.0.1/node_modules/mime-types
+│   │   ├── mocha -> ../../node_modules/.pnpm/mocha@11.7.4/node_modules/mocha
+│   │   ├── mocha-froth -> ../../node_modules/.pnpm/mocha-froth@0.2.10/node_modules/mocha-froth
+│   │   ├── nodeify -> ../../node_modules/.pnpm/nodeify@1.0.1/node_modules/nodeify
+│   │   ├── oidc-provider -> ../../node_modules/.pnpm/oidc-provider@9.5.1/node_modules/oidc-provider
+│   │   ├── openapi-backend -> ../../node_modules/.pnpm/openapi-backend@5.15.0/node_modules/openapi-backend
+│   │   ├── openapi-schema-validation -> ../../node_modules/.pnpm/openapi-schema-validation@0.4.2/node_modules/openapi-schema-validation
+│   │   ├── prom-client -> ../../node_modules/.pnpm/prom-client@15.1.3/node_modules/prom-client
+│   │   ├── proxy-addr -> ../../node_modules/.pnpm/proxy-addr@2.0.7/node_modules/proxy-addr
+│   │   ├── rate-limiter-flexible -> ../../node_modules/.pnpm/rate-limiter-flexible@8.1.0/node_modules/rate-limiter-flexible
+│   │   ├── rehype -> ../../node_modules/.pnpm/rehype@13.0.2/node_modules/rehype
+│   │   ├── rehype-minify-whitespace -> ../../node_modules/.pnpm/rehype-minify-whitespace@6.0.2/node_modules/rehype-minify-whitespace
+│   │   ├── resolve -> ../../node_modules/.pnpm/resolve@1.22.11/node_modules/resolve
+│   │   ├── rusty-store-kv -> ../../node_modules/.pnpm/rusty-store-kv@1.3.1/node_modules/rusty-store-kv
+│   │   ├── security -> ../../node_modules/.pnpm/security@1.0.0/node_modules/security
+│   │   ├── semver -> ../../node_modules/.pnpm/semver@7.7.3/node_modules/semver
+│   │   ├── set-cookie-parser -> ../../node_modules/.pnpm/set-cookie-parser@2.7.2/node_modules/set-cookie-parser
+│   │   ├── sinon -> ../../node_modules/.pnpm/sinon@21.0.0/node_modules/sinon
+│   │   ├── socket.io -> ../../node_modules/.pnpm/socket.io@4.8.1/node_modules/socket.io
+│   │   ├── socket.io-client -> ../../node_modules/.pnpm/socket.io-client@4.8.1/node_modules/socket.io-client
+│   │   ├── split-grid -> ../../node_modules/.pnpm/split-grid@1.0.11/node_modules/split-grid
+│   │   ├── superagent -> ../../node_modules/.pnpm/superagent@10.2.3/node_modules/superagent
+│   │   ├── supertest -> ../../node_modules/.pnpm/supertest@7.1.4/node_modules/supertest
+│   │   ├── swagger-ui-express -> ../../node_modules/.pnpm/swagger-ui-express@5.0.1_express@5.1.0/node_modules/swagger-ui-express
+│   │   ├── tinycon -> ../../node_modules/.pnpm/tinycon@0.6.8/node_modules/tinycon
+│   │   ├── tsx -> ../../node_modules/.pnpm/tsx@4.20.6/node_modules/tsx
+│   │   ├── typescript -> ../../node_modules/.pnpm/typescript@5.9.3/node_modules/typescript
+│   │   ├── ueberdb2 -> ../../node_modules/.pnpm/ueberdb2@5.0.22/node_modules/ueberdb2
+│   │   ├── underscore -> ../../node_modules/.pnpm/underscore@1.13.7/node_modules/underscore
+│   │   ├── unorm -> ../../node_modules/.pnpm/unorm@1.6.0/node_modules/unorm
+│   │   ├── vitest -> ../../node_modules/.pnpm/vitest@4.0.6_@types+debug@4.1.12_@types+node@24.9.2_jsdom@27.1.0_lightningcss@1.30.2_tsx@4.20.6/node_modules/vitest
+│   │   └── wtfnode -> ../../node_modules/.pnpm/wtfnode@0.10.1/node_modules/wtfnode
+│   ├── package.json
+│   ├── playwright.config.ts
+│   ├── README.md
+│   ├── static
+│   │   ├── css
+│   │   ├── empty.html
+│   │   ├── favicon.ico
+│   │   ├── font
+│   │   ├── img
+│   │   ├── js
+│   │   ├── oidc
+│   │   ├── robots.txt
+│   │   ├── skins
+│   │   └── tests.html
+│   ├── templates
+│   │   ├── admin
+│   │   ├── export_html.html
+│   │   ├── index.html
+│   │   ├── indexBootstrap.js
+│   │   ├── javascript.html
+│   │   ├── pad.html
+│   │   ├── padBootstrap.js
+│   │   ├── padViteBootstrap.js
+│   │   ├── timeslider.html
+│   │   └── timeSliderBootstrap.js
+│   ├── tests
+│   │   ├── backend
+│   │   ├── backend-new
+│   │   ├── container
+│   │   ├── frontend
+│   │   ├── frontend-new
+│   │   ├── ratelimit
+│   │   ├── README.md
+│   │   └── settings.json
+│   ├── tsconfig.json
+│   ├── vitest.config.ts
+│   └── web.config
+├── start.bat
+├── tests -> src/tests
+├── tree.txt
+├── ui
+│   ├── consent.html
+│   ├── login.html
+│   ├── node_modules
+│   │   ├── ep_etherpad-lite -> ../../src
+│   │   ├── typescript -> ../../node_modules/.pnpm/typescript@5.9.3/node_modules/typescript
+│   │   └── vite -> ../../node_modules/.pnpm/rolldown-vite@7.2.0_@types+node@24.9.2_esbuild@0.25.12_tsx@4.20.6/node_modules/rolldown-vite
+│   ├── package.json
+│   ├── pad.html
+│   ├── src
+│   │   ├── consent.ts
+│   │   ├── main.ts
+│   │   ├── style.css
+│   │   ├── typescript.svg
+│   │   └── vite-env.d.ts
+│   ├── tsconfig.json
+│   └── vite.config.ts
+└── var
+    ├── installed_plugins.json
+    ├── js
+    └── rusty.db
+
+161 directories, 291 files

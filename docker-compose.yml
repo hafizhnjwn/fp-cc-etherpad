@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  postgres-db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password_rahasia
+      POSTGRES_DB: etherpad_db
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - saas-network
+    ports:
+      - "5433:5432" # PENTING: Buka port ini agar Python Manager bisa baca DB
+
+  saas-manager:
+    build: 
+      context: ./saas_manager
+    container_name: saas-manager
+    ports:
+      - "8080:5000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      - postgres-db
+    environment:
+      # Beritahu Manager lokasi DB untuk membaca daftar Pad
+      - DB_URI=postgresql://admin:password_rahasia@postgres-db:5432/etherpad_db
+    networks:
+      - saas-network
+
+  image-builder:
+    build:
+      context: .
+      args:
+        BUILD_ENV: copy
+    image: my-etherpad-saas
+    command: echo "Build done"
+    networks:
+      - saas-network
+
+volumes:
+  db_data:
+  etherpad_uploads: # (+) Volume baru untuk file upload terpusat
+
+networks:
+  saas-network:
+    name: saas-network
+    driver: bridge
